@@ -85,6 +85,7 @@ Due to deprecation of the libnss-ldap and libpam-ldap, I had to purge these and 
 
 passwd, group, shadow to files nslcd
 
+<img width="1020" height="569" alt="2026-04-08_00-33-49" src="https://github.com/user-attachments/assets/fd608af7-45f3-4f46-8a00-87033f3eea36" />
 
 
 
