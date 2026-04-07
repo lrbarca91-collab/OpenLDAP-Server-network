@@ -39,6 +39,8 @@ VM 101 Accounting01: 192.168.1.11/24
 
 Vm 102 HR01: 192.168.1.12/24
 
+I configured Openldap on my clients VM101 and VM102:
+
 <img width="1310" height="757" alt="2026-03-29_18-55-53" src="https://github.com/user-attachments/assets/62a6db4e-da8c-40b6-a6f4-9cf8f968db78" />
 
 Afterwards I configured the sshd config under /etc/ssh/sshd_config to allow me to be able to ssh via powershell into my proxmox and the internal network 
