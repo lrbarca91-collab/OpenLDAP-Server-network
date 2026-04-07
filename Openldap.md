@@ -27,6 +27,9 @@ structure.ldif:
 
 <img width="1101" height="264" alt="image" src="https://github.com/user-attachments/assets/db284ed7-2b8c-499d-8e78-e915615cccb1" />
 
+<img width="516" height="279" alt="2026-04-07_23-51-38" src="https://github.com/user-attachments/assets/fcc676ce-ab6a-4878-b38e-d0ef3f017516" />
+
+
 I then configured my network, all vm's have linux ubuntu:
 
 internal ip's:
