@@ -49,8 +49,21 @@ sudo apt install -y libnss-ldap libpam-ldap ldap-utils nscd
 
 <img width="1310" height="757" alt="2026-03-29_18-55-53" src="https://github.com/user-attachments/assets/62a6db4e-da8c-40b6-a6f4-9cf8f968db78" />
 
+I then created the structure for my users and groups by creating a structure.ldif
+
+<img width="618" height="288" alt="image" src="https://github.com/user-attachments/assets/80c50470-2a5e-463f-8d8e-8fcfb7afd145" />
+
+Thereafter i created a users.ldif with the user lorenzo with a hash generated password:
+
+<img width="690" height="344" alt="image" src="https://github.com/user-attachments/assets/1bb31cf4-121f-4e3e-8671-6434fe4d0ac5" />
+
+
 Afterwards I configured the sshd config under /etc/ssh/sshd_config to allow me to be able to ssh via powershell into my proxmox and the internal network 
 without needing to use the proxmox console.
+
+Thereafter I configured the nssswitch.conf so that the vm's know to check the openldap for users:
+
+<img width="999" height="622" alt="2026-04-07_23-57-59" src="https://github.com/user-attachments/assets/54ec736c-7607-4c1e-9d9a-bc50227b95e8" />
 
 
 
