@@ -65,5 +65,26 @@ Thereafter I configured the nssswitch.conf so that the vm's know to check the op
 
 <img width="999" height="622" alt="2026-04-07_23-57-59" src="https://github.com/user-attachments/assets/54ec736c-7607-4c1e-9d9a-bc50227b95e8" />
 
+During configuration I wished to test if my user with "getent passwd lorenzo"
+
+This did not return any output so I had to check if my client has connectivity to my openldap server:
+
+# Test anonymous search (should work without password)
+ldapsearch -x -H ldap://192.168.1.10 -b "dc=mylab,dc=local" -LLL
+
+# Test authenticated search as admin
+ldapsearch -x -H ldap://192.168.1.10 -b "dc=mylab,dc=local" -D "cn=admin,dc=mylab,dc=local" -W -LLL
+
+# Search specifically for the user
+ldapsearch -x -H ldap://192.168.1.10 -b "ou=users,dc=mylab,dc=local" "(&(objectClass=posixAccount)(uid=lorenzo))"
+<img width="1698" height="519" alt="2026-04-08_00-20-17" src="https://github.com/user-attachments/assets/b4532ade-b1c8-4cde-a00e-0b0d2716b8ff" />
+
+My client passed all the connectivity tests from the above commands.
+
+Due to deprecation of the libnss-ldap and libpam-ldap, I had to purge these and then install nslcd and then reocnfigure the nsswitch.cong:
+
+passwd, group, shadow to files nslcd
+
+
 
 
