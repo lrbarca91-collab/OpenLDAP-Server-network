@@ -112,5 +112,7 @@ I then accessed my Apache LDAP console:
 
 <img width="929" height="553" alt="2026-04-09_00-25-25" src="https://github.com/user-attachments/assets/f8476e0a-b11e-4917-8e51-d0f50469b420" />
 
+After having this all configured I tightened lightly the access to my proxmox server via hosts.allow and hosts.deny configs in /etc/
+
 
 
