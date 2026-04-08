@@ -81,11 +81,36 @@ ldapsearch -x -H ldap://192.168.1.10 -b "ou=users,dc=mylab,dc=local" "(&(objectC
 
 My client passed all the connectivity tests from the above commands.
 
-Due to deprecation of the libnss-ldap and libpam-ldap, I had to purge these and then install nslcd and then reocnfigure the nsswitch.cong:
+Due to deprecation of the libnss-ldap and libpam-ldap, I had to purge these and then install nslcd and then reconfigure the nsswitch.conf:
 
 passwd, group, shadow to files nslcd
 
 <img width="1020" height="569" alt="2026-04-08_00-33-49" src="https://github.com/user-attachments/assets/fd608af7-45f3-4f46-8a00-87033f3eea36" />
+
+I had some issues verifying the user lorenzo, i decided to make things easier on myself to install a apache web server interface so that I could have a better overview of my nslcd configuration and users.
+
+after installing apache (phpldapadmin) in the openldap server i then configured the the config.php under /etc/phpldapadmin/config.php
+
+I configured the following lines under servers:
+
+$servers->setValue('server','host','127.0.0.1');
+$servers->setValue('server','base',array('dc=mylab,dc=local'));
+$servers->setValue('login','bind_id','cn=admin,dc=mylab,dc=local');
+
+Thereafter I built a tunnel in my proxmmox via iptables to route trafffic straight to my Openldap server from my proxmox server:
+
+# 1. Forward incoming port 22 traffic to the ldap-server
+iptables -t nat -A PREROUTING -i vmbr0 -p tcp --dport 2222 -j DNAT --to-destination 192.168.1.10:22
+
+# 2. Allow the forwarded traffic through
+iptables -A FORWARD -p tcp -d 192.168.1.10 --dport 22 -j ACCEPT
+
+# 3. Masquerade outgoing traffic
+iptables -t nat -A POSTROUTING -j MASQUERADE
+
+I then accessed my Apache LDAP console:
+
+<img width="929" height="553" alt="2026-04-09_00-25-25" src="https://github.com/user-attachments/assets/f8476e0a-b11e-4917-8e51-d0f50469b420" />
 
 
 
