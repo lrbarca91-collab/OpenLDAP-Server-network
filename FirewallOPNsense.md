@@ -35,6 +35,12 @@ vmbr0 is the default switch that comes with the Proxmox server. I need to shift 
 
 For some reason despite being able to log into all clients with lorenzo89 user created in my openldap server, my openldap server has no interfaces and connections.
 
+I assigned the interfaces on OPNsense:
+
+vtnet1 to vmbr1 via tap103i1
+
+vtnet0 to vmbr0 via tap103i0
+
 
 
 
