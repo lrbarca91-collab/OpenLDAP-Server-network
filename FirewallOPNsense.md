@@ -26,7 +26,16 @@ I have installed OPNsense in my proxmox server with the static ip address 192.16
 
 I have analysed my current infra settings via brctl show and then I drew a diagramm:
 
+
+
 <img width="941" height="592" alt="image" src="https://github.com/user-attachments/assets/182fd25f-0aae-4373-8acd-c86b94306577" />
+
+
+vmbr0 is the default switch that comes with the Proxmox server. I need to shift the Accounting and HR vms to vmbr1 along with the Openldap server, then have only opnsense connected to vmbr0 and vmbr0 to the internet.
+
+For some reason despite being able to log into all clients with lorenzo89 user created in my openldap server, my openldap server has no interfaces and connections.
+
+
 
 
 
