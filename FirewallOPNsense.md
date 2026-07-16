@@ -41,6 +41,14 @@ vtnet1 to vmbr1 via tap103i1
 
 vtnet0 to vmbr0 via tap103i0
 
+I changed all the vms accept OPNsense to virtual switch vmbr1
+
+<img width="1306" height="436" alt="image" src="https://github.com/user-attachments/assets/d8a13608-1222-4d0c-8653-76cc78d041b4" />
+
+<img width="829" height="181" alt="2026-07-15_15-05-21" src="https://github.com/user-attachments/assets/c7ffbec5-6edd-4766-8076-a8cf7e66583a" />
+
+
+
 
 
 
