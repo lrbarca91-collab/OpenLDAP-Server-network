@@ -47,6 +47,14 @@ I changed all the vms accept OPNsense to virtual switch vmbr1
 
 <img width="829" height="181" alt="2026-07-15_15-05-21" src="https://github.com/user-attachments/assets/c7ffbec5-6edd-4766-8076-a8cf7e66583a" />
 
+I decided to tes tthe connectivity of my bridge from the clients to the Opnsense, i temporarily added a ip address to my Openldap server, and then i pinged it from OPNsense.
+
+<img width="606" height="250" alt="image" src="https://github.com/user-attachments/assets/e1f65784-2c20-4909-bf43-0dfb0a4c6cdb" />
+
+
+<img width="759" height="309" alt="2026-07-16_14-09-13" src="https://github.com/user-attachments/assets/f097ebf5-e331-44b4-9306-ba5d28a1a6c6" />
+
+
 
 
 
