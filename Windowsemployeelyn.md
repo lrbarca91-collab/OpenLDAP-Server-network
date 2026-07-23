@@ -11,3 +11,8 @@ maximum functional level as it allows me to run windows server 2016, 2019, 2022,
 <img width="600" height="827" alt="Bildschirmfoto vom 2026-07-23 19-47-02" src="https://github.com/user-attachments/assets/90c26214-b42c-498b-af11-3c13f68d7f66" />
 
 <img width="600" height="359" alt="Bildschirmfoto vom 2026-07-23 19-47-26" src="https://github.com/user-attachments/assets/d482ebcb-01c1-4736-ab3d-ae353c4c3bbf" />
+
+I then setup the organisational Units Servers, Users, Workstations and created a user under User called Gunther Potter
+
+
+<img width="600" height="359" alt="Bildschirmfoto vom 2026-07-23 19-59-53" src="https://github.com/user-attachments/assets/89061e60-69a7-47b0-867c-2980f7ea9b8a" />
