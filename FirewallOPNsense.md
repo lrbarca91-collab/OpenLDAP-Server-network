@@ -1,7 +1,7 @@
 Infrastruture Background:
 After having configured my network on Proxmox with a Openldap server with a Apacheldap GUI, I decided 
 it was neccessary to tighten up my security, as manually typing ip addresses in my host.allow config 
-on the proxmox server, was reptitive and time consuming especially as my internet ip addresses change 
+on the proxmox server, was repetitive and time consuming especially as my internet ip addresses change 
 often, and this also creates security vulnerabilities.
 
 I have so far a Proxmox Server with a Openldap server, Apacheldap and vm's one for HR and Accounting.
@@ -54,8 +54,34 @@ I decided to tes tthe connectivity of my bridge from the clients to the Opnsense
 
 <img width="759" height="309" alt="2026-07-16_14-09-13" src="https://github.com/user-attachments/assets/f097ebf5-e331-44b4-9306-ba5d28a1a6c6" />
 
+Later on I had added more to my infrastructure including a DC Controller with Windows Server 2025 and I also added DNS services to the server.
+
+I was not able to successfully configure my Infrastructure so that my only OPnsense would be reachable via the public ip 144.217.X.X as it would always be reachable via Bridge vmbr0, regardless
+of how I configured my OPnsense, and I tried to shift the ip address to OPnsense but I was unsuccessful.
+
+I decided instead to buy an additonal IP address from OVH 15.235.X.X this i assigned to Opnsense under vmbr0.
+
+I then edited the interfaces config on my proxmox node:
 
 
+vmbr0:
+    manual
+    VLAN-aware
+    bridge-vids 2-4094
+    physical interfaces eno1/eno2
+
+
+
+removing the public ip 144.217.X.X
+
+
+After I assinged my Opnsense WAN to 15.235.X.X
+
+So that my architecture would look as follows:
+
+
+
+Thereafter once Opnsense was available on the public ip in the web browser I decided that I needed to tighten the security, so i began to do further ocnfigurations using wireguard.
 
 
 
