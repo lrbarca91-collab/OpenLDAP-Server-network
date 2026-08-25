@@ -1,4 +1,4 @@
-I have configured a new Server: Windows Server 2025 with the private ip address 192.168.40.1, on a new VLAN0.40 on my OPNSense LAN on the vmbr1 bridge in my Proxmox Server.
+I have configured a new Server: Windows Server 2025 with the private ip address 192.168.40.10, on a new VLAN0.40 on my OPNSense LAN on the vmbr1 bridge in my Proxmox Server.
 
 I have now assigned the Ip address and setup DNS on the Windows Server:
 
